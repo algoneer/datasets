@@ -1,0 +1,55 @@
+name: Census Income Dataset
+url: https://archive.ics.uci.edu/ml/datasets/Adult
+description: |
+  Predict whether income exceeds $50K/yr based on census data.
+  Also known as "Census Income" dataset.
+loader:
+  type: csv
+  args:
+    filename: data.csv.gz
+schema:
+  columns:
+    instant: 
+      type: timestamp
+      type: numerical
+    dteday: 
+      type: integer
+    season: 
+      type: categorical
+      category_type: integer
+      categories: [0, 1, 2, 3]
+    yr: 
+      type: integer
+      format: year,            
+    mnth: 
+      type: integer
+      format: month
+    holiday: 
+      type: boolean
+      true: 0
+      false: 1
+    weekday: 
+      type: integer
+      format: weekday
+    workingday: 
+      type: boolean
+      true: 0
+      false: 1
+    weathersit: 
+      type: categorical
+      category_type: integer
+      categories: [2, 1, 3]
+    temp: 
+      type: numerical
+    atemp: 
+      type: numerical
+    hum: 
+      type: numerical
+    windspeed: 
+      type: numerical
+    casual: 
+      type: integer
+    registered: 
+      type: integer
+    cnt: 
+      type: integer
