@@ -4,7 +4,7 @@ from setuptools import find_packages
 setup(
     name="algoneer_datasets",
     python_requires=">=3",
-    version="0.0.1",
+    version="0.0.2",
     author="Andreas Dewes",
     author_email="andreas.dewes@algoneer.org",
     license="Creative-Commons (license of datasets varies)",
