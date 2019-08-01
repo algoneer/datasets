@@ -8,48 +8,70 @@ loader:
   args:
     filename: data.csv.gz
 schema:
-  columns:
-    instant: 
-      type: timestamp
-      type: numerical
-    dteday: 
+  attributes:
+    instant:
       type: integer
+      roles: [x]
+    dteday: 
+      type: timestamp
+      config:
+        format: "%Y-%m-%d"
+      roles: [x]
     season: 
       type: categorical
-      category_type: integer
-      categories: [0, 1, 2, 3]
+      config:
+        type: integer
+        categories: [0, 1, 2, 3]
+      roles: [x]
     yr: 
       type: integer
-      format: year,            
+      roles: [x]
     mnth: 
       type: integer
-      format: month
+      roles: [x]
     holiday: 
       type: boolean
-      true: 0
-      false: 1
+      config:
+        true: 0
+        false: 1
+      roles: [x]
     weekday: 
       type: integer
-      format: weekday
+      config:
+        range:
+          min: 0
+          max: 6
+      roles: [x]
     workingday: 
       type: boolean
-      true: 0
-      false: 1
+      config:
+        true: 0
+        false: 1
+      roles: [x]
     weathersit: 
       type: categorical
-      category_type: integer
-      categories: [2, 1, 3]
+      config:
+        type: integer
+        categories: [2, 1, 3]
+      roles: [x]
     temp: 
       type: numerical
+      roles: [x]
     atemp: 
       type: numerical
+      roles: [x]
     hum: 
       type: numerical
+      roles: [x]
     windspeed: 
       type: numerical
+      roles: [x]
     casual: 
       type: integer
+      roles: [y]
     registered: 
       type: integer
+      roles: [y]
     cnt: 
       type: integer
+      roles: [y]

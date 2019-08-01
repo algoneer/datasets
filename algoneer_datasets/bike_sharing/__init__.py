@@ -1,4 +1,4 @@
-from algoneer.dataset import PandasDataSet
+from algoneer.dataset.pandas import PandasDataSet
 import os
 
 path = os.path.dirname(__file__)
