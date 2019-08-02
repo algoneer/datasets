@@ -5,7 +5,7 @@ from req import reqs
 setup(
     name="algoneer_datasets",
     python_requires=">=3.5",
-    version="0.0.4",
+    version="0.0.5",
     author="Andreas Dewes",
     author_email="andreas.dewes@algoneer.org",
     license="Creative-Commons (license of datasets varies)",
