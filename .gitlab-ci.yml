@@ -9,6 +9,7 @@ test:
   before_script:
     - pip3 install -e .
     - pip3 install -r requirements-test.txt
+    - pip3 install -r requirements-optional.txt
   script:
     - make
 

@@ -12,6 +12,7 @@ update:
 	pip3 install pur
 	pur -r requirements.txt
 	pur -r requirements-test.txt
+	pur -r requirements-optional.txt
 
 release:
 	python3 setup.py sdist
