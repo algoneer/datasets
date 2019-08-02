@@ -18,5 +18,14 @@ algorithms : Dict[str, Any]= {
     'gaussian-nb' : GaussianNB
 }
 
-def get_algorithm(type : str) -> Algorithm:
-    return SklearnAlgorithm(algorithms[type]())
+default_args = {
+    'logistic-regression' : {
+        'solver' : 'lbfgs',
+        'multi_class' : 'auto',
+    }
+}
+
+def get_algorithm(type : str, **kwargs) -> Algorithm:
+    kw = default_args.get(type, {})
+    kw.update(kwargs)
+    return SklearnAlgorithm(algorithms[type], kwargs=kw)
