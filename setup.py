@@ -10,7 +10,7 @@ setup(
     license="Creative-Commons (license of datasets varies)",
     url="https://github.com/algoneer/datasets",
     packages=find_packages(),
-    install_requires=["algoneer"],
+    install_requires=["algoneer>=0.0.2"],
     package_data={'algoneer_datasets': ['**/*.gz', '**/*.yml', 'py.typed']},
     zip_safe=False,
     entry_points={},
